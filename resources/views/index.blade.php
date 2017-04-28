@@ -88,7 +88,7 @@
                                 <h4>{{$value->product_name}}</h4>
                                 <p><h2>{{$value->product_price}}</h2></p>
                                 <p>{{$value->product_description}}</p>
-                                <p><a href="{{ route ('AddToCart' , ['id' =>$products->id])}}" class="btn btn-success" role="button">Add To Cart</a></p>
+                                <p><a href="{{ route ('AddToCart' , ['id' => $value->id]) }}" class="btn btn-success" role="button">Add To Cart</a></p>
                             </div>
                           </div>
                         </div>

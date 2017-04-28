@@ -49,10 +49,12 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="" style="margin-top: -67px;
+                                <a href="/shopping-cart" style="margin-top: -67px;
                                     padding-top: 89px;
-                                    margin-left: -90px;">
+                                    margin-left: -90px;
+                                    color: black;">
                                     <span class="glyphicon glyphicon-shopping-cart"></span>My Cart
+                                    <span class="badge">{{ Session::has('cart') ? Session::get ('cart')->TotalQty : ''}}</span>
                                 </a>
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-top:-50px;">
                                     {{ Auth::user()->name }} <span class="caret"></span>

@@ -16,12 +16,14 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 Route::post('/add_product','ProductController@store');
 Route::get('/index','ProductController@index');
 
 Route::get('/AddToCart/{id}',[
 		'uses' => 'ProductController@AddToCart',
 		'as' =>'AddToCart'
+	]);
+Route::get('/shopping-cart',[
+		'uses' => 'ProductController@getCart',
+		'as' =>'shopping-cart'
 	]);
